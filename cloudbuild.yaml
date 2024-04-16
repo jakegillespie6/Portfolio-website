@@ -10,4 +10,4 @@ steps:
   args: ["app", "deploy"]
 timeout: "1600s"
 options:
-  logging: GCS_ONLY
+  logging: NONE
