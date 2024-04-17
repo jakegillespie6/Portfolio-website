@@ -24,7 +24,8 @@ app.use(passport.session());
 //call authorization route on express app
 require('./routes/auth')(app);
 
-const PORT = process.env.PORT || 5000;
 
-console.log(`App listening on port: ${PORT}.` + "at: http://localhost:5000/")
-app.listen(PORT);
+app.listen(process.env.PORT || 5000, function() {
+    console.log("App listening on ", this.address().port, app.settings.env)
+});
+
