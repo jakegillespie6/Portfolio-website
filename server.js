@@ -25,5 +25,5 @@ app.use(passport.session());
 require('./routes/auth')(app);
 
 const PORT = process.env.PORT || 5000;
-console.log(`App listening on ${PORT}.`)
+console.log(`App listening on port: ${PORT}.` + "at: http://localhost:5000/")
 app.listen(PORT);
